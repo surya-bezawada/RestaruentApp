@@ -1,0 +1,44 @@
+<div class="simple-login-container">
+    <h1>Signup Form</h1>&nbsp;
+    <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+        <div class="row">
+            <div class="col-md-12 form-group">
+                <label for="form-control">Name</label>
+
+                <input type="text" formControlName="name" class="form-control" placeholder="Enter your fullName">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 form-group">
+                <label for="form-control">Mobile</label>
+
+                <input type="text" formControlName="mobile" class="form-control" placeholder="Enter your MobileNumber">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 form-group">
+                <label for="form-control">Email Id</label>
+
+                <input type="email" formControlName="email" class="form-control" placeholder="Enter your email">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 form-group">
+                <label for="form-control">Password</label>
+                <input type="password" formControlName="password" placeholder="Enter your Password" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 form-group">
+                <button type="submit" class="btn btn-block btn-login">Sign Up</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <a routerLink="/login">Already Member? Click to Login!!</a>
+            </div>
+        </div>
+
+    </form>
+
+</div>

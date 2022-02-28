@@ -1,0 +1,49 @@
+{
+  "posts": [
+    {
+      "id": 2,
+      "name": "surya",
+      "email": "surya@gmail.com",
+      "mobile": "8639190459",
+      "address": "ramalayamstreet,chagallu",
+      "services": "tea,biscuts"
+    },
+    {
+      "id": 3,
+      "name": "test",
+      "email": "test@gmail.com",
+      "mobile": "8639190459",
+      "address": "meenanagaram",
+      "services": "milk,coffee"
+    },
+    {
+      "id": 5,
+      "name": "sai",
+      "email": "sai@gmail.com",
+      "mobile": "9666473069",
+      "address": "hajdofjkfoe",
+      "services": "byriani"
+    }
+  ],
+  "comments": [
+    {
+      "name": "",
+      "mobile": "",
+      "email": "",
+      "password": "",
+      "id": 1
+    },
+    {
+      "name": "surya",
+      "mobile": "8639190459",
+      "email": "surya@gmail.com",
+      "password": "surya@95",
+      "id": 2
+    }
+  ],
+  "profile": {
+    "fullname": "surya teja",
+    "mobile": "8639190459",
+    "address": "gjhghjghjguyjhghg"
+  }
+}

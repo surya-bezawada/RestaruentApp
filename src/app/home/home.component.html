@@ -1,0 +1,63 @@
+<div class="banner">
+    <div class="content">
+        <h1 class="mb-5">Fressh Cooked Food<br/> At Your Door.</h1>
+        <a routerLink="menu">Order Now <i class="fa-solid fa-arrow-right-long"></i></a>
+    </div>
+</div>
+<div class="container mt-5 mb-4">
+    <h1 class="text-center">How to get <span class="highlight">fresh food</span> </h1>
+    <div class="row mt-3">
+        <div class="col-lg-4 mt-2">
+            <div class="stepbox">
+                <h1>1</h1>
+            <p>Select Food</p>
+            </div>
+            
+        </div>
+        <div class="col-lg-4 mt-2">
+            <div class="stepbox">
+                <h1>2</h1>
+                <p>fill the Details</p>
+
+            </div>
+           
+        </div>
+        <div class="col-lg-4 mt-2">
+            <div class="stepbox">
+                <h1>3</h1>
+            <p>your order delivered in minutes</p>
+
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div class="container mt-4 mb-4">
+    <h1 class="text-center">Customers <span class="highlight">Favourites Food</span></h1>
+    <div class="row">
+        <div class="col-lg-3 mt-3" *ngFor="let fd of foodData;index as i">
+            <div class="foodbox" *ngIf="i<=3">
+                <img src="{{fd.foodImg}}" />
+                <h1>{{fd.foodName}}</h1>
+                <p>{{fd.foodPrice | currency:'INR'}}</p>
+            </div>
+        </div>
+    </div>
+    <a routerLink="menu" class="viewmorebtn">view more <i class="bi bi-arrow-right"></i></a>
+</div>
+
+<!-- <div class="container mt-4 mb-4">
+    <h1 class="text-center">Customers <span class="highlight">Favourites Food</span></h1>
+    <div class="row">
+        <div class="col-lg-3 mt-3" *ngFor="let fd of foodData">
+            <div class="foodbox" >
+                <img src="{{fd.foodImg}}" />
+                <h1>{{fd.foodName}}</h1>
+                <p>{{fd.foodPrice| currency:'INR'}}</p>
+            </div>
+
+        </div>
+    </div>
+    <a routerLink="menu" class="viewmore">View More  <i class="fa-solid fa-arrow-right-long"></i></a>
+</div> -->

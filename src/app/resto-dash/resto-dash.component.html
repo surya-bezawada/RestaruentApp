@@ -1,0 +1,87 @@
+<nav class="navbar navbar-light navset">
+    <div class="container-fluid">
+        <h1 style="color: aliceblue;">Restartuent App</h1>
+        <div class="d-flex">
+            <button (click)="clickAddResto()" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Restartuent</button>&nbsp;
+            <button routerLink="/login" class="btn btn-dark">LogOut</button>
+        </div>
+    </div>
+</nav>
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container-fluid">
+      <h3 class="display-4">Restaruent Records management</h3>
+      <p class="lead">You can save your records overhere!! </p>
+    </div>
+  </div>
+
+
+<table class="table mt-3">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Mobile</th>
+            <th scope="col">Address</th>
+            <th scope="col">Services</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of allRestoData ">
+            <td>{{data.id}}</td>
+            <td> {{data.name}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.mobile}}</td>
+            <td>{{data.address}}</td>
+            <td>{{data.services}}</td>
+            <td>
+                <button class="btn btn-primary" (click)="onEditResto(data)"data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>&nbsp;
+                <button class=" btn btn-danger" (click)="deleteRest(data)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Person Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="formValue">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Name</label>
+                  <input type="text" formControlName="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Email</label>
+                  <input type="email" formControlName="email" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Mobile</label>
+                    <input type="text" formControlName="mobile" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Address</label>
+                    <input type="text" formControlName="address" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Service</label>
+                    <input type="text" formControlName="services" class="form-control" id="exampleInputPassword1">
+                  </div>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-warning" data-bs-dismiss="modal" id="cancel">Close</button>
+          <button *ngIf="showAdd" type="button" class="btn btn-primary" (click)="addResto()">Add</button>
+          <button *ngIf="showBtn" type="button" class="btn btn-primary" (click)="updateResto()">Update</button>
+        </div>
+      </div>
+    </div>
+  </div>

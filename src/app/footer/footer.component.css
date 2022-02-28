@@ -1,0 +1,38 @@
+.footer{
+    overflow: hidden;
+    position: sticky;
+    top:100%;
+    background-color:black;
+    padding:20px 10px
+}
+ h1{
+    color:white;
+    font-size: 20px;
+    font-weight: bold;
+}
+a{
+
+    color: white;
+    text-decoration: none;
+    padding:0px 5px;
+    font-size: 17px;
+
+} 
+a:hover{
+    color:var(--primary-color)
+}
+i{
+    padding:0px 2px;
+}
+p{
+    color:white;
+    font-size: 16px;
+}
+img{
+    width: 150px;
+    height: 80px;
+}
+.copyright{
+    color: white;
+    text-align: center;
+}
